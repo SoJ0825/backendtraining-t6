@@ -60,6 +60,17 @@ echo implode(', ', $name3) . PHP_EOL;
  * 3. 每行 10 個名字，中間用 `, ` 分開，且名字間等距印出
  * =============================
  */
+$faker = Faker\Factory::create();
+$newLineNames = [];
+for ($i = 0; $i < 50; $i++) {
+    if ($i >= 10 && $i % 10 == 0) {
+        echo implode(', ', $newLineNames) . PHP_EOL;
+        $newLineNames = [];
+    }
+    $name = str_pad($faker->firstName(), 10,' ');
+    array_push($newLineNames, $name);
+    array_push($names, $name);
+}
 
 function check($names)
 {
