@@ -34,6 +34,23 @@ echo implode(', ', $name2) . PHP_EOL;
  * 2. 隨機印出 20 個名字，中間用 `, ` 分開
  * =============================
  */
+function generateRandomString($length = 10)
+{
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
+$name3 = [];
+for ($i = 0; $i < 20; $i++) {
+    array_push($name3, generateRandomString());
+}
+$names = array_merge($names, $name3);
+echo implode(', ', $name3) . PHP_EOL;
 
 /**
  * =============================
