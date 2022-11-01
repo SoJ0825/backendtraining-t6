@@ -23,6 +23,10 @@ echo $name1 . PHP_EOL;
  * 請用新的 1 行，隨機印出 5 個名字，中間用 `, ` 分開
  * =============================
  */
+$name2 = ['Iron Man', 'Spider Man', 'Thor', 'American Captain', 'Eagle eye'];
+$names = array_merge($names, $name2);
+$name2Length = count($name2);
+echo implode(', ', $name2) . PHP_EOL;
 
 /**
  * =============================
@@ -51,7 +55,7 @@ function check($names)
             die();
         }
     }
-    echo '----------------------------' . PHP_EOL;
+    echo PHP_EOL . '----------------------------' . PHP_EOL;
     echo 'check OK';
 }
 
