@@ -1,9 +1,22 @@
 <?php
+
+$names = [];
 /**
  * =============================
  * 請用 1 行，隨便印出 1 個名字
  * =============================
  */
+$name1 = 'Iron Man';
+//$name1 = ' Iron Man'; // OK
+//$name1 = ' Iron Man'; // Ok
+//$name1 = ' Iron Man '; // OK
+//$name1 = ''; // fail
+//$name1 = ' '; // fail
+//$name1 = '  '; //fail
+//$name1 = '   '; // fail
+//$name1 = '                            '; //fail
+array_push($names, $name1);
+echo $name1 . PHP_EOL;
 
 /**
  * =============================
@@ -25,3 +38,21 @@
  * 3. 每行 10 個名字，中間用 `, ` 分開，且名字間等距印出
  * =============================
  */
+
+function check($names)
+{
+    foreach ($names as $name) {
+        $oldName = $name;
+        $name = trim($name, ' ');
+        if (empty($name)) {
+            echo '============================' . PHP_EOL;
+            echo $oldName . PHP_EOL;
+            echo 'check failed';
+            die();
+        }
+    }
+    echo '----------------------------' . PHP_EOL;
+    echo 'check OK';
+}
+
+check($names);
