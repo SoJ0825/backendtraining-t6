@@ -1,12 +1,10 @@
 # 題目
 
-### 1. 請用 1 行，隨便印出 1 個名字
- 
-### 2. 請用新的 1 行，隨機印出 5 個不同的名字，中間用 `, ` 分開
+- 請在 terminal 下執行 php 檔案
+- 列印出一個英雄的狀態，至少包含 event, name,  HP, MP
+- event 會顯示扣除多少 HP
+- HP 會根據 event 扣除對應的 HP，當 HP 歸零後，結束程式
+- example:
 
-### 3. 請用新的 1 行，隨機印出 20 個不同的名字，中間用 `, ` 分開
 
-### 4. 透過套件隨機生成名字
-- 請用新的 1 行
-- 利用 fakerphp/faker 隨機印出 50 個名字
-- 每行 10 個名字，中間用 `, ` 分開，且名字間等距印出
+![](https://soj-use.s3.ap-northeast-1.amazonaws.com/heroStates.gif)
