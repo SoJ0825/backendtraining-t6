@@ -138,8 +138,6 @@ class Monster extends Character {
 class battleScene {
     protected $character1;
     protected $character2;
-    protected $heroStatus;
-    protected $monsterStatus;
     
     public function __construct($character1, $character2){
         $this->character1 = $character1;
