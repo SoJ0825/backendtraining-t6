@@ -16,6 +16,7 @@ echo $faker->name();
  * 請用新的 1 行，隨機印出 5 個名字，中間用 `, ` 分開
  * =============================
  */
+/*
 require_once 'vendor/autoload.php';
 $ans="";
 for($i=0;$i<5;$i++){
@@ -29,6 +30,7 @@ for($i=0;$i<5;$i++){
     }
 }
 echo $ans;
+*/
 
 /**
  * =============================
@@ -36,6 +38,19 @@ echo $ans;
  * 2. 隨機印出 20 個名字，中間用 `, ` 分開
  * =============================
  */
+require_once 'vendor/autoload.php';
+$ans="";
+for($i=0;$i<20;$i++){
+    $faker = Faker\Factory::create();
+    $name=$faker->name();
+    if($i==19){
+        $ans.=$name;
+    }
+    else{
+        $ans.=$name.", ";
+    }
+}
+echo $ans;
 
 
 /**
