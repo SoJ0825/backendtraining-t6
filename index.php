@@ -62,40 +62,25 @@ echo $ans;
  * =============================
  */
 require_once 'vendor/autoload.php';
-$ans="";
-for($i=0;$i<50;$i++){
+$ans = "";
+for ($i = 0; $i < 50; $i++) {
     $faker = Faker\Factory::create();
-    $name=$faker->name();
-    $add="";
-    $check=true;
-    for($x=0;$x<17;$x++){
-        if($check==false){
-            $add.=" ";
-        }
-        elseif($x==strlen($name)){
-            $add.=" ";
-            $check=false;
-        }
-        elseif($name[$x]==" " and $name[$x-1]!="."){
-            $add.=$name[$x];
-            $check=false;
-        }
-        else{
-            $add.=$name[$x];
+    $name = $faker->name();
+    $add = "";
+    for ($x = 0; $x < strlen($name); $x++) {
+        if ($name[$x] == " " && $name[$x - 1] != ".") {
+            break;
+        } else {
+            $add .= $name[$x];
         }
     }
-    if($i==49){
-        $ans.=$add;
-    }
-    elseif($i%10==9){
-        $ans.=$add.", \n";
-    }
-    else{
-        $ans.=$add.", ";
+    $add = str_pad($add, 16, " ");
+    if ($i == 49) {
+        $ans .= $add;
+    } elseif ($i % 10 == 9) {
+        $ans .= $add . ", \n";
+    } else {
+        $ans .= $add . ", ";
     }
 }
 echo $ans;
-
-?>
-
-
