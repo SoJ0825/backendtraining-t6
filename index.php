@@ -11,7 +11,7 @@
  * 請用新的 1 行，隨機印出 5 個名字，中間用 `, ` 分開
  * =============================
  */
-$name = ["Alice", "Patrick", "Will", "Wade", "Mia"];
+/*$name = ["Alice", "Patrick", "Will", "Wade", "Mia"];
 echo implode(", ", array_rand(array_flip($name), 5));
 
 
@@ -21,6 +21,13 @@ echo implode(", ", array_rand(array_flip($name), 5));
  * 2. 隨機印出 20 個名字，中間用 `, ` 分開
  * =============================
  */
+require_once 'vendor/autoload.php';
+$faker = Faker\Factory::create();
+$name = array() ;
+ for ($i = 0; $i < 21; $i++) {
+    $name []  = $faker->name($i);
+}
+echo implode(", " , $name);
 
 /**
  * =============================
