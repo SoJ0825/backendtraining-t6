@@ -18,15 +18,14 @@ echo $faker->name();
  */
 /*
 require_once 'vendor/autoload.php';
-$ans="";
-for($i=0;$i<5;$i++){
+$ans = "";
+for ($i = 0; $i < 5; $i++) {
     $faker = Faker\Factory::create();
-    $name=$faker->name();
-    if($i==4){
-        $ans.=$name;
-    }
-    else{
-        $ans.=$name.", ";
+    $name = $faker->name();
+    if ($i == 4) {
+        $ans .= $name;
+    } else {
+        $ans .= $name . ", ";
     }
 }
 echo $ans;
@@ -40,15 +39,14 @@ echo $ans;
  */
 /*
 require_once 'vendor/autoload.php';
-$ans="";
-for($i=0;$i<20;$i++){
+$ans = "";
+for ($i = 0; $i < 20; $i++) {
     $faker = Faker\Factory::create();
-    $name=$faker->name();
-    if($i==19){
-        $ans.=$name;
-    }
-    else{
-        $ans.=$name.", ";
+    $name = $faker->name();
+    if ($i == 19) {
+        $ans .= $name;
+    } else {
+        $ans .= $name . ", ";
     }
 }
 echo $ans;
@@ -61,6 +59,7 @@ echo $ans;
  * 3. 每行 10 個名字，中間用 `, ` 分開，且名字間等距印出
  * =============================
  */
+/*
 require_once 'vendor/autoload.php';
 $ans = "";
 for ($i = 0; $i < 50; $i++) {
@@ -84,3 +83,4 @@ for ($i = 0; $i < 50; $i++) {
     }
 }
 echo $ans;
+*/
